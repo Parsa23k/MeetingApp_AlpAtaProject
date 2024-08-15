@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <ul>
+    <li *ngIf="!isAuthenticated()"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!isAuthenticated()"><a routerLink="/register">Register</a></li>
+    <li *ngIf="isAuthenticated()" class="dropdown">
+      <a routerLink="/meetings" class="dropbtn">Meetings</a>
+      <div class="dropdown-content">
+        <a routerLink="/meetings">View Meetings</a>
+        <a routerLink="/meetings/create">Create Meeting</a>
+      </div>
+    </li>
+    <li *ngIf="isAuthenticated()"><a class="logout" (click)="logout()">Logout</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  padding-top: 80px; /* Ensure content doesn't hide behind the navbar */
+  margin: 0;
+  display: block; /* Ensure that Flexbox or Grid styles are not affecting the layout */
+  min-height: 100vh; /* Full height for vertical centering if needed */
+}

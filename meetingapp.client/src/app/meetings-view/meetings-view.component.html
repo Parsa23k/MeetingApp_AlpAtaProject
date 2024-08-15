@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Meetings</h2>
+  <div *ngIf="meetings.length === 0" class="no-meetings">
+    <p>No meetings available.</p>
+  </div>
+  <div *ngIf="meetings.length > 0" class="meeting-grid">
+    <div *ngFor="let meeting of meetings" class="meeting-card">
+      <h3>{{ meeting.name }}</h3>
+      <p><strong>Start Date:</strong> {{ meeting.startDate | date }}</p>
+      <p><strong>End Date:</strong> {{ meeting.endDate | date }}</p>
+      <p><strong>Description:</strong> {{ meeting.description }}</p>
+      <div *ngIf="meeting.documentUrls.length > 0">
+        <p><strong>Documents:</strong></p>
+        <ul>
+          <li *ngFor="let url of meeting.documentUrls">
+            <a [href]="url" download>{{ getFileName(url) }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Buttons container for edit and delete actions -->
+      <div class="meeting-card-buttons">
+        <button class="edit-btn" (click)="editMeeting(meeting.id)">Edit</button>
+        <button class="delete-btn" (click)="deleteMeeting(meeting.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

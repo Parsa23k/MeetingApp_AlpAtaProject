@@ -1,0 +1,26 @@
+.landing-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.landing-actions {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  margin-right: 10px;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}

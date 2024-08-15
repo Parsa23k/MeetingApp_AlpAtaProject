@@ -1,0 +1,82 @@
+/* Container styling for the entire edit form */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Styling for the document section */
+.document-list {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+  .document-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .document-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .document-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+    .document-list a:hover {
+      text-decoration: underline;
+    }
+
+.btn-delete-document {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+  .btn-delete-document:hover {
+    background-color: #c82333;
+  }
+
+.upload-section {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+  /* Styling for the upload and delete all section */
+  .upload-section input[type="file"] {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .upload-section .delete-all {
+    display: flex;
+    align-items: center;
+  }
+
+    .upload-section .delete-all input[type="checkbox"] {
+      margin-right: 10px;
+    }

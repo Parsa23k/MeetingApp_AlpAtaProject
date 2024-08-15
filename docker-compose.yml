@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  meetingapp.server:
+    image: ${DOCKER_REGISTRY-}meetingappserver
+    build:
+      context: .
+      dockerfile: MeetingApp.Server/Dockerfile

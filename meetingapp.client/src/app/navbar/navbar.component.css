@@ -1,0 +1,96 @@
+.navbar {
+  background-color: #333;
+  padding: 20px;
+  width: 100%; /* Make sure navbar spans full width */
+  position: fixed; /* Fix it to the top */
+  top: 0;
+  z-index: 1000; /* Ensure navbar stays on top */
+  display: flex;
+  align-items: center; /* Vertically center items */
+  box-sizing: border-box;
+  height: 60px; /* Set the height of the navbar */
+}
+
+body {
+  padding-top: 60px; /* Add padding-top equal to the height of the navbar */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+/* Ensure consistent styling for all links */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 5px; /* Consistent border-radius */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+  /* Style for the logout link */
+  .navbar a.logout {
+    cursor: pointer; /* Ensure pointer cursor for logout link */
+  }
+
+  /* Hover effect for all links */
+  .navbar a:hover {
+    background-color: #555; /* Darker background on hover */
+  }
+
+/* Container for dropdown */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Ensure consistent styling for dropdown button */
+.navbar .dropbtn {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* Ensure pointer cursor for dropdown */
+}
+
+/* Align dropdown content with other items */
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%; /* Align dropdown content below the button */
+  left: 0; /* Align dropdown content with dropdown button */
+}
+
+  /* Dropdown links */
+  .navbar .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+    /* Change color of dropdown links on hover */
+    .navbar .dropdown-content a:hover {
+      background-color: #575757;
+    }
+
+/* Show dropdown content on hover */
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}

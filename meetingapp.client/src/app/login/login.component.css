@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Subtract navbar height from viewport height */
+  padding-top: 100px; /* Adjust as needed for top padding */
+}
+
+form {
+  background-color: #f7f7f7; /* Light grey background */
+  padding: 30px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px; /* Limit form width */
+  width: 100%; /* Full width up to max-width */
+}
+
+.form-label {
+  display: block; /* Ensure labels take up full width */
+  font-weight: 600; /* Make labels bold */
+  margin-bottom: 10px; /* Space between label and input field */
+}
+
+.form-control {
+  width: 100%; /* Full width of the form */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px; /* Slightly rounded inputs */
+  border: 1px solid #ced4da; /* Light grey border */
+  margin-bottom: 15px; /* Space between fields */
+  transition: border-color 0.3s ease; /* Smooth border change on focus */
+  box-sizing: border-box; /* Include padding in element's width */
+}
+
+  .form-control:focus {
+    border-color: #007bff; /* Bootstrap blue on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle shadow on focus */
+  }
+
+button {
+  width: 100%; /* Full width button */
+  padding: 10px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+

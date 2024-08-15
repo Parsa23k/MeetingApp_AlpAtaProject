@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <h2>Edit Meeting</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Meeting Name</label>
+      <input type="text" id="name" formControlName="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input type="date" id="startDate" formControlName="startDate" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date</label>
+      <input type="date" id="endDate" formControlName="endDate" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" class="form-control"></textarea>
+    </div>
+
+    <!-- Existing Documents Section -->
+    <div *ngIf="existingDocuments.length > 0" class="document-list">
+      <label>Existing Documents</label>
+      <ul>
+        <li *ngFor="let url of existingDocuments">
+          <a [href]="url" download>{{ getFileName(url) }}</a>
+          <button type="button" class="btn btn-delete-document" (click)="markForDeletion(url)">Delete</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- New Documents Upload Section -->
+    <div class="upload-section">
+      <label for="documents">Upload New Documents</label>
+      <input type="file" id="documents" (change)="onFileSelected($event)" multiple>
+
+      <div class="delete-all">
+        <input type="checkbox" id="deleteAll" formControlName="deleteAllDocuments">
+        <label for="deleteAll">Delete All Documents</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </form>
+</div>
